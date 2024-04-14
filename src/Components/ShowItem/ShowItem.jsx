@@ -11,7 +11,7 @@ const ShowItem = ({home}) => {
     <h2 className="card-title text-2xl">{estate_title}</h2>
     <div className="flex gap-2">
       <p className="text-xl text-blue-500 font-semibold">#{ segment_name}</p> <p className="text-2xl text-red-600">|</p>
-      <p className="text-lg">Available For: <span className="font-bold text-green-500 text-xl">{status }</span></p>
+      <p className="text-lg">Ststus: <span className="font-bold text-green-500 text-xl">{status }</span></p>
     </div>
     <div className="flex mt-3">
       <p className="text-lg">Price:<span className="font-bold text-green-500 text-xl">{price } </span></p> <p className="text-2xl text-red-600">|</p>
