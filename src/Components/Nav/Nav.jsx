@@ -1,5 +1,6 @@
 import logo from '../../assets/download.jpg'
 import { NavLink } from 'react-router-dom';
+import 'animate.css';
 
 
 const Nav = () => {
@@ -11,7 +12,7 @@ const links=<>
 </>
 
     return (
-        <div className="navbar  container mx-auto text-fuchsia-400 text-xl">
+        <div className="navbar animate__animated animate__bounce container mx-auto text-fuchsia-400 text-xl">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +22,7 @@ const links=<>
       {links}
       </ul>
     </div>
-    <div className='flex gap-2 items-center'>
+    <div className='flex gap-2 items-center '>
     <img className='h-9 w-9' src={logo} alt="" />
     <a className="font-bold text-fuchsia-400 text-2xl"> Dream Dwellings</a>
     </div>
