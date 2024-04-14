@@ -24,7 +24,7 @@ const links=<>
     </div>
     <div className='flex gap-2 items-center '>
     <img className='h-9 w-9' src={logo} alt="" />
-    <a className="font-bold text-fuchsia-400 text-2xl"> Dream Dwellings</a>
+    <a className="font-bold text-fuchsia-400 text-2xl  "> Dream Dwellings</a>
     </div>
     
   </div>

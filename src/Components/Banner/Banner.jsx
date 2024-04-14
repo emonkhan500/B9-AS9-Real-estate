@@ -1,37 +1,59 @@
-import React from 'react';
-import ban1 from '../../assets/breno-assis-r3WAWU5Fi5Q-unsplash.jpg'
-import ban2 from '../../assets/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg'
-import ban3 from '../../assets/sean-pollock-PhYq704ffdA-unsplash.jpg'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination,Autoplay,Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='container mx-auto mt-5'>
-            <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full">
-    <img  src={ban1} className="w-full h-[600px] rounded-lg " />
-    
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <div className='container mx-auto mt-12'>
+         <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        
+        pagination={{
+            clickable: true,
+        }} 
+        modules={[Pagination,Autoplay,Navigation]} className="mySwiper">
+        <SwiperSlide><div className='slide slide1'>
+           <div className='text-center'>
+           <h1 className='text-white font-bold text-5xl '>Start Your Real Estate Journey Here <br /> Dive into Our Listings</h1>
+           <Link to="" className="btn btn-outline  bg-[#0BE58A] w-[180px] mt-5 text-[#150B2B] text-xl font-semibold rounded-xl">Explore Now</Link>
+           </div>
+           <br />
+           
+        </div></SwiperSlide>
+        <SwiperSlide><div className='slide slide2'> <div className='text-center'>
+           <h1 className='text-white font-bold text-5xl'>Experience Home Like Never Before <br /> Dive into Our Listings</h1>
+           <button className="btn btn-success bg-[#0BE58A] w-[180px] mt-5 text-[#150B2B] text-xl font-semibold rounded-xl">Explore Now</button>
+           </div>
+           <br /></div></SwiperSlide>
+        <SwiperSlide><div className='slide slide3'> <div className='text-center'>
+           <h1 className='text-white font-bold text-5xl'> Experience Home Like Never Before <br /> Dive into Our Listings</h1>
+           <button className="btn btn-success bg-[#0BE58A] w-[180px] mt-5 text-[#150B2B] text-xl font-semibold rounded-xl">Explore Now</button>
+           </div>
+           <br /></div></SwiperSlide>
+        {/* <SwiperSlide><div className='slide slide4'> <div>
+           <h1 className='text-white font-bold text-5xl'>Experience Home Like Never Before <br /> Dive into Our Listings</h1>
+           <button className="btn btn-success bg-[#0BE58A] w-[180px] mt-5 text-[#150B2B] text-xl font-semibold rounded-xl">Explore Now</button>
+           </div>
+           <br /></div></SwiperSlide>
+        <SwiperSlide><div className='slide slide5'> <div>
+           <h1 className='text-white font-bold text-5xl'>Experience Home Like Never Before <br /> Dive into Our Listings</h1>
+           <button className="btn btn-success bg-[#0BE58A] w-[180px] mt-5 text-[#150B2B] text-xl font-semibold rounded-xl">Explore Now</button>
+           </div>
+           <br /></div></SwiperSlide> */}
        
-      <a href="#slide3" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src={ban2} className="w-full h-[600px] rounded-lg" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" className="carousel-item relative w-full">
-    <img src={ban3} className="w-full h-[600px] rounded-lg" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  
-</div>
+      </Swiper>
         </div>
     );
 };

@@ -1,77 +1,75 @@
-{
-    "estates": [
-      {
-        "estate_title": "Luxury Penthouse with Stunning Views",
-        "id": "1",
-        "segment_name": "Penthouse",
-        "description": "A spectacular penthouse offering breathtaking city skyline views. Modern design with high-end amenities.",
-        "price": "$2,500,000",
-        "status": "sale",
-        "area": "3000 sq ft",
-        "location": "Downtown Metropolis",
-        "image": "https://i.ibb.co/SVZH72V/lotus-design-n-print-jt2-I98bh53-A-unsplash.jpg",
-        "facilities": ["Spacious living room", "Private terrace", "Gourmet kitchen"]
-      },
-      {
-        "estate_title": "Beachfront Property with Private Access",
-        "id": "2",
-        "segment_name": "Beachfront properties",
-        "description": "Exclusive beachfront villa with direct access to pristine sandy shores. Ideal for luxury seaside living.",
-        "price": "$4,200,000",
-        "status": "sale",
-        "area": "5000 sq ft",
-        "location": "Ocean Bay",
-        "image": "https://i.ibb.co/ZdJGX9P/brian-garrity-8-Ut-XBV88w-C4-unsplash.jpg",
-        "facilities": ["Infinity pool", "Outdoor entertainment area", "Spa"]
-      },
-      {
-        "estate_title": "Luxury Resort Retreat in Tropical Paradise",
-        "id": "3",
-        "segment_name": "Resorts",
-        "description": "An upscale resort featuring elegant accommodations amidst lush tropical gardens. Perfect for relaxation and recreation.",
-        "price": "$800/night",
-        "status": "rent",
-        "area": "10 acres",
-        "location": "Island Oasis",
-        "image": "https://i.ibb.co/BrBXsyM/avi-werde-h-Hz4yrvxwl-A-unsplash.jpg",
-        "facilities": ["Multiple pools", "Fitness center", "Fine dining restaurants"]
-      },
-      {
-        "estate_title": "Private Island Getaway with Exclusive Amenities",
-        "id": "4",
-        "segment_name": "Private Islands",
-        "description": "Your own private island paradise with luxury residences and personalized services.",
-        "price": "$15,000,000",
-        "status": "sale",
-        "area": "50 acres",
-        "location": "Tropical Archipelago",
-        "image": "https://i.ibb.co/BrBXsyM/avi-werde-h-Hz4yrvxwl-A-unsplash.jpg",
-        "facilities": ["Secluded beaches", "Helipad", "Staffed villas"]
-      },
-      {
-        "estate_title": "Mediterranean Style Villa with Panoramic Views",
-        "id": "5",
-        "segment_name": "Villas",
-        "description": "Elegant villa with Mediterranean architecture and expansive outdoor spaces.",
-        "price": "$1,800,000",
-        "status": "sale",
-        "area": "4000 sq ft",
-        "location": "Sunset Hill",
-        "image": "https://i.ibb.co/BrBXsyM/avi-werde-h-Hz4yrvxwl-A-unsplash.jpg",
-        "facilities": ["Outdoor pool", "Landscaped gardens", "Modern kitchen"]
-      },
-      {
-        "estate_title": "Grand Mansion Estate with Luxury Features",
-        "id": "6",
-        "segment_name": "Mansions",
-        "description": "Stunning mansion showcasing opulent interiors and vast entertainment spaces.",
-        "price": "$10,000,000",
-        "status": "sale",
-        "area": "15,000 sq ft",
-        "location": "Exclusive Suburb",
-        "image": "https://i.ibb.co/zXRJsyn/nick-romanov-hw4a-UQ81ic-unsplash.jpg",
-        "facilities": ["Home theater", "Indoor pool", "Wine cellar"]
-      }
-    ]
-  }
-  
+ [
+    {
+      "estate_title": "Luxury Penthouse with Stunning Views",
+      "id": "1",
+      "segment_name": "Penthouse",
+      "description": "A spectacular penthouse offering breathtaking city skyline views. Modern design with high-end amenities.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Downtown Metropolis",
+      "image": "https://example.com/penthouse-image.jpg",
+      "facilities": ["Spacious living room", "Private terrace", "Gourmet kitchen"]
+    },
+    {
+      "estate_title": "Beachfront Property with Private Access",
+      "id": "2",
+      "segment_name": "Beachfront properties",
+      "description": "Exclusive beachfront villa with direct access to pristine sandy shores. Ideal for luxury seaside living.",
+      "price": "$4,200,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Ocean Bay",
+      "image": "https://example.com/beachfront-property-image.jpg",
+      "facilities": ["Infinity pool", "Outdoor entertainment area", "Spa"]
+    },
+    {
+      "estate_title": "Luxury Resort Retreat in Tropical Paradise",
+      "id": "3",
+      "segment_name": "Resorts",
+      "description": "An upscale resort featuring elegant accommodations amidst lush tropical gardens. Perfect for relaxation and recreation.",
+      "price": "$800/night",
+      "status": "rent",
+      "area": "10 acres",
+      "location": "Island Oasis",
+      "image": "https://example.com/resort-image.jpg",
+      "facilities": ["Multiple pools", "Fitness center", "Fine dining restaurants"]
+    },
+    {
+      "estate_title": "Private Island Getaway with Exclusive Amenities",
+      "id": "4",
+      "segment_name": "Private Islands",
+      "description": "Your own private island paradise with luxury residences and personalized services.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Tropical Archipelago",
+      "image": "https://example.com/private-island-image.jpg",
+      "facilities": ["Secluded beaches", "Helipad", "Staffed villas"]
+    },
+    {
+      "estate_title": "Mediterranean Style Villa with Panoramic Views",
+      "id": "5",
+      "segment_name": "Villas",
+      "description": "Elegant villa with Mediterranean architecture and expansive outdoor spaces.",
+      "price": "$1,800,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Sunset Hill",
+      "image": "https://example.com/villa-image.jpg",
+      "facilities": ["Outdoor pool", "Landscaped gardens", "Modern kitchen"]
+    },
+    {
+      "estate_title": "Grand Mansion Estate with Luxury Features",
+      "id": "6",
+      "segment_name": "Mansions",
+      "description": "Stunning mansion showcasing opulent interiors and vast entertainment spaces.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Exclusive Suburb",
+      "image": "https://example.com/mansion-image.jpg",
+      "facilities": ["Home theater", "Indoor pool", "Wine cellar"]
+    }
+  ]
+
