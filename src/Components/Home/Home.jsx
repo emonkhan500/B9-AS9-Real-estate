@@ -14,7 +14,8 @@ const Home = () => {
     return (
         <div className='container mx-auto'>
 <Banner></Banner>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-14 gap-5'>
+<div className='grid px-10 lg:px-6 grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mt-14 gap-9'>
+
 {
    luxury && luxury.map(home=><ShowItem home={home}></ShowItem>)
 }

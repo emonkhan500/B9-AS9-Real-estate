@@ -12,6 +12,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Error from './Components/Error/Error';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
+import ShowDetails from './Components/ShowDetails/ShowDetails';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path:'/update',
         element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:'/details/:id',
+        loader:()=>fetch(`/estate.json`),
+        element:<ShowDetails></ShowDetails>
       }
     ]
   },
