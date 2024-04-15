@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const ShowItem = ({home}) => {
     const{estate_title,id,segment_name,description,price,status,area,location,image,facilities}=home || {}
+
+    useEffect(()=>{
+      Aos.init({duration:2000})
+  
+  },[])
     
     return (
-        <div className="card card-compact w-full  bg-base-100 lg:shadow-xl">
+        <div data-aos = "fade-down-right" className=" card card-compact w-full  bg-base-100 lg:shadow-xl">
   <figure><img src={image} alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title text-2xl">{estate_title}</h2>
