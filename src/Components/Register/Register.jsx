@@ -8,7 +8,7 @@ import { IoMdEyeOff } from "react-icons/io";
 
 
 const Register = () => {
-	const {createUser}=useContext(AuthContext)
+	const {createUser,updateUserProfile}=useContext(AuthContext)
 	const [registerError,setRegisterError]=useState('')
 	const[show,setShow]=useState(false)
 
@@ -21,7 +21,7 @@ const Register = () => {
 
 
 		e.preventDefault()
-		const name=e.target.username.value
+		const name=e.target.username.value;
 	   const email=e.target.email.value;
 	   const photo=e.target.photo.value;
 	   const password=e.target.password.value;
@@ -44,10 +44,14 @@ else if(!/[a-z]/.test(password)){
 
 	   createUser(email,password)
 	   .then(result=>{
-		 console.log(result.user)
+		 
 		 notify()
+		 updateUserProfile(name,photo)
 		// navigate
-		navigate('/')
+		.then(()=>{
+            navigate('/')
+		})
+		
 	   })
 	   .catch(error=>{
 	 console.log(error)
@@ -113,9 +117,9 @@ else if(!/[a-z]/.test(password)){
 		
 	</p>
 </div>
-<ToastContainer />
+
         </div>
     );
-};
+}; 
 
 export default Register;

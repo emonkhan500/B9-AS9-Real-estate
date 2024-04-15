@@ -6,6 +6,7 @@ const Home = () => {
     const [luxury,setLuxury]=useState([])
     const[loading,setLoading]=useState(true)
     
+    
  useEffect(()=>{
       
         fetch('estate.json')

@@ -1,8 +1,8 @@
-# React + Vite
+# Website Name: Dream Dwellings
+# live link:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- We have 6 Property in our Home page.
+ - You can check details of every property by clicking on View Property Button.
+- User must have login to see some private Route
+- User can Update Name and Photo in Update Profile page.
+- Responsive for all devices.

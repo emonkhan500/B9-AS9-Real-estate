@@ -15,6 +15,8 @@ import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import ShowDetails from './Components/ShowDetails/ShowDetails';
 import AuthProvider from './Components/Provider/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute';
+import { ToastContainer } from 'react-toastify';
+import Extra from './Components/ExtraToute/Extra';
 
 const router = createBrowserRouter([
   {
@@ -36,12 +38,16 @@ const router = createBrowserRouter([
       },
       {
         path:'/update',
-        element:<UpdateProfile></UpdateProfile>
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       },
       {
         path:'/details/:id',
         loader:()=>fetch(`/estate.json`),
         element:<PrivateRoute><ShowDetails></ShowDetails></PrivateRoute>
+      },
+      {
+        path:'/extra',
+        element:<PrivateRoute><Extra></Extra></PrivateRoute>
       }
     ]
   },
@@ -51,6 +57,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
     <RouterProvider router={router} />
+    <ToastContainer />
     </AuthProvider>
   </React.StrictMode>,
 )
