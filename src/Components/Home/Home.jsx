@@ -4,15 +4,22 @@ import ShowItem from '../ShowItem/ShowItem';
 
 const Home = () => {
     const [luxury,setLuxury]=useState([])
-
-
-    useEffect(()=>{
+    const[loading,setLoading]=useState(true)
+    
+ useEffect(()=>{
+      
         fetch('estate.json')
         .then(res=>res.json())
         .then(data=>setLuxury(data))
+      setLoading(false)
     },[])
     return (
         <div className='container mx-auto'>
+            <div className='text-center'>
+            {
+                loading && <span className=" loading loading-bars loading-lg"></span>
+            }
+            </div>
 <Banner></Banner>
 <div className='grid px-10 lg:px-6 grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mt-14 gap-9'>
 

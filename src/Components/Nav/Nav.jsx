@@ -1,9 +1,20 @@
 import logo from '../../assets/download.jpg'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import 'animate.css';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 const Nav = () => {
+const{user,logOut}=useContext(AuthContext)
+
+const handleSignOut=()=>{
+  logOut()
+  .then()
+  .catch(error=>{
+    console.error(error)
+  })
+}
 
 const links=<>
 <li className='text-xl' ><NavLink  to='/'>Home</NavLink></li>
@@ -35,7 +46,16 @@ const links=<>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn text-fuchsia-400">Button</a>
+  <div className="w-10 rounded-full">
+          <img className="" alt="" src={logo} />
+        </div>
+        {
+          user?<>
+          <p>{user.email}</p>
+<Link onClick={handleSignOut}> <button className="btn text-fuchsia-500">Sign Out</button></Link>
+</> :
+<Link to='/login'> <button className="btn text-fuchsia-500">Login</button></Link>
+        }
   </div>
 </div>
        </div>

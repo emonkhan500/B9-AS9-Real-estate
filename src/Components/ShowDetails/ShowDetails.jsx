@@ -12,7 +12,7 @@ const ShowDetails = () => {
 
     const {estate_title,segment_name,description,price,status,area,location,image,facilities}=selectedProperty||{}
     return (
-        <div className="  bg-base-200 h-[600px] mt-20 container mx-auto">
+        <div className="  bg-base-200 lg:h-[600px] mt-20 container px-6 lg:px-0 mx-auto">
   <div className="flex items-center flex-col lg:flex-row">
     <img  src={image} className=" w-[600px] h-[570px] rounded-lg shadow-2xl" />
     <div className="card-body">

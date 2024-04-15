@@ -13,6 +13,8 @@ import Register from './Components/Register/Register';
 import Error from './Components/Error/Error';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import ShowDetails from './Components/ShowDetails/ShowDetails';
+import AuthProvider from './Components/Provider/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         loader:()=>fetch(`/estate.json`),
-        element:<ShowDetails></ShowDetails>
+        element:<PrivateRoute><ShowDetails></ShowDetails></PrivateRoute>
       }
     ]
   },
@@ -47,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
