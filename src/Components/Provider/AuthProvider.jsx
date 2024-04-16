@@ -22,11 +22,13 @@ const createUser= (email,password)=>{
 
 // update User
 const updateUserProfile=(name,image)=>{
-    setLoading(true)
+    
     return updateProfile(auth.currentUser,{
         displayName:name,
         photoURL:image
+      
     })
+  
 }
 
 

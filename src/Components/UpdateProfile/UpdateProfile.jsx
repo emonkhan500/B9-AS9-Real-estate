@@ -1,9 +1,16 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../Firebase/Firebase.config";
+const auth = getAuth(app);
 
 
 const UpdateProfile = () => {
-    const{user,updateUserProfile,setLoading}=useContext(AuthContext)
+    const [reloadOnce, setReloadOnce] = useState(false);
+
+    const{user,updateUserProfile,loading,setLoading}=useContext(AuthContext)
+    console.log(loading)
     useEffect(()=>{
         document.title='Update Profile'
     },[])
@@ -13,12 +20,21 @@ const UpdateProfile = () => {
         const photo=e.target.photo.value;
         console.log(photo,name)
 
-        updateUserProfile(name,photo)
-        .then(()=>{
-           
+        updateProfile(auth.currentUser,{
+            displayName:name,
+            photoURL:photo
+          
         })
+        .then(()=>{
+            toast.success('updated')
+            setReloadOnce(true)
+        })
+       
     }
 
+    if(reloadOnce){
+        window.location.reload()
+    }
     // const handleUpdate=()=>{
     //     updateUserProfile()
     // }
@@ -28,7 +44,7 @@ const UpdateProfile = () => {
 	<div className="flex flex-col justify-between">
 		<img  src={user?.photoURL ||'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} alt="" className="p-6 rounded-full  " />
 		<div className="space-y-2">
-			<h2 className="text-xl bg-fuchsia-400 pl-5 py-3 rounded-s-lg font-bold leading-tight lg:text-2xl"><span className="text-white mr-4">Name:</span>   {user.displayName || 'No Name'}</h2>
+			<h2 className="text-xl bg-fuchsia-400 pl-5 py-3 rounded-s-lg font-bold leading-tight lg:text-2xl"><span className="text-white mr-4">Name:</span>   {user?.displayName || 'No Name'}</h2>
 			
 		</div>
 	</div>
