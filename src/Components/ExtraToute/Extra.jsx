@@ -10,7 +10,7 @@ import img6 from '../../assets/Brand-advertiser-2x-ba73a6.png'
 
 const Extra = () => {
     useEffect(()=>{
-        document.title='Extra'
+        document.title='Deals'
     },[])
 
     useEffect(()=>{

@@ -58,7 +58,7 @@ const logOut=()=>{
     return signOut(auth)
     }
     
-    // observe
+    // observing
 useEffect(()=>{
     const unSubscribe=  onAuthStateChanged(auth,(currentUser)=>{
   console.log('inside ',currentUser)

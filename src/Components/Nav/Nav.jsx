@@ -20,7 +20,7 @@ const links=<>
 <li className='text-xl' ><NavLink  to='/'>Home</NavLink></li>
 <li className='text-xl'><NavLink to='/update'>Update 
 Profile </NavLink></li>
-<li className='text-xl'><NavLink to='/extra'>Extra </NavLink></li>
+<li className='text-xl'><NavLink to='/extra'>Deals </NavLink></li>
 
 </>
 
